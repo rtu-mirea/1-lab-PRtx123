@@ -11,15 +11,16 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Введите длину массива: ");
 		int n= in.nextInt();
-		int mas[] = new int[n];//создаем  массив размером n
-		while (!"6".equals(s)){
+		short mas[] = new short[n];//создаем  массив размером n
+		while (!"7".equals(s)){
 			System.out.println("Меню :");
 			System.out.println("1. Для заполнения массива вручную введите 1");
 			System.out.println("2. Для заполнения массива рандомными числами введите 2");
 			System.out.println("3. Для поиска количества чисел массива больше заданного введите 3");
 			System.out.println("4. Для сортировки массива по возрастанию методом вставки нажмите 4");
 			System.out.println("5. Для вывода массива на экран нажмите 5");
-			System.out.println("6. Для выхода из приложения введите 6");
+			System.out.println("6. Для вывода массива в обратном направлении на экран нажмите 6");
+			System.out.println("7. Для выхода из приложения введите 7");
 			s = in.next();
 
 			try {
@@ -44,8 +45,13 @@ public class Main {
 					insertionSort2(mas);
 					System.out.println("Отсортированный массив:");
 					outArray(mas);
+					break;
 				case 5:
 					outArray(mas);
+					break;
+				case 6:
+					reverseArray(mas);
+					break;
 
 			}
 		}
@@ -53,15 +59,15 @@ public class Main {
 
 
     }
-	public static void inpArray(int arr[]){
+	public static void inpArray(short arr[]){
 
 		Scanner in = new Scanner(System.in);
 		System.out.println("Заполните массив");
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = in.nextInt();// заполняем массив с клавиатуры
+			arr[i] = in.nextShort();// заполняем массив с клавиатуры
 		}
 	}
-	public static void Zadanie2(int arr[]){
+	public static void Zadanie2(short arr[]){
     	int b=0;
 		Scanner in = new Scanner(System.in);
 		System.out.print("Введите число: ");
@@ -77,19 +83,21 @@ public class Main {
 		System.out.println("Количетсво чисел больше заданного: "+b);
 
 	}
-	public static void randomArr(int arr[]){
+	public static void randomArr(short arr[]){
 
 		// create random object
 		Random rand = new Random();
 		for(int i=0;i<arr.length;i++){
-			arr[i]=rand.nextInt(100);
+			//arr[i]=rand.nextInt(10);
+			arr[i] = (short) ( Math.random() * 100);
 			System.out.println(arr[i]);
 		}
 
 	}
-	public static void insertionSort2(int[] arr)
+	public static void insertionSort2(short [] arr)
 	{
-		int i, j, t;
+		int i, j;
+		short t;
 		for (i = 0; i < arr.length; i++)
 		{
 			t = arr[i];
@@ -97,12 +105,17 @@ public class Main {
 			arr[j + 1] = t;
 		}
 	}
-	public static void outArray(int arr[]){
+	public static void outArray(short arr[]){
 
 
 		for(int i=0;i<arr.length;i++){
 
 			System.out.println(arr[i]);
+		}
+	}
+	public static void reverseArray(short arr[]){
+    	for(int i=arr.length-1;i>=0;i--){
+    		System.out.println(arr[i]);
 		}
 	}
 
