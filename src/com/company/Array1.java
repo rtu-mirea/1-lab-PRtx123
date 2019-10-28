@@ -21,6 +21,19 @@ public class Array1 {
         //in.close();
     }
 
+    short getarr(int index)
+    {
+        return arr[index];
+    }
+
+    int arrelementscount(){
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            count+=1;
+        }
+        return count;
+    }
+
     void randInput() {
         for (int i = 0; i < n; i ++){
             arr[i] = (short) (Math.random() * 100);
@@ -39,36 +52,18 @@ public class Array1 {
         }
     }
 
-    void outArray(){
 
-
-        for(int i=0;i<arr.length;i++){
-
-            System.out.println(arr[i]);
-        }
-    }
-
-    void Comparsion(){
+    int Comparison(short a){
         int b=0;
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите число: ");
-        int a = in.nextInt();
         for(int i = 0;i<arr.length;i++){
             if(arr[i]>a){
                 b++;
             }
         }
-        if(b==0){
-            System.out.print("Нет чисел больше данного ");
-        }
-        System.out.println("Количетсво чисел больше заданного: "+b);
+        return b;
+
     }
 
-    void reverseArray(){
-        for(int i=arr.length-1;i>=0;i--){
-            System.out.println(arr[i]);
-        }
-    }
 
 
 }

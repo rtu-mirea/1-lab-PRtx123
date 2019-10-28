@@ -15,6 +15,7 @@ public class Main {
 		n  = in.nextInt();
 		Array1 mas = new Array1(n);
 
+
 		while (!"7".equals(s)){
 			System.out.println("Меню :");
 			System.out.println("1. Для заполнения массива вручную введите 1");
@@ -43,22 +44,36 @@ public class Main {
 					mas.randInput();
 					break;
 				case 3:
-					mas.Comparsion();
+					System.out.print("Введите число: ");
+					short a = in.nextShort();
+					if(mas.Comparison(a)==0){
+					 System.out.print("Нет чисел больше данного ");
+					 }
+					System.out.println("Количетсво чисел больше заданного: "+mas.Comparison(a));
 					break;
 				case 4:
 
 					System.out.println("Исходный массив:");
-					mas.outArray();
+					for(int i=0;i<mas.arrelementscount();i++){
+						System.out.println(mas.getarr(i));
+					}
 					mas.insertionSort2();
 					System.out.println("Отсортированный массив:");
-					mas.outArray();
+					for(int i=0;i<mas.arrelementscount();i++){
+						System.out.println(mas.getarr(i));
+					}
 
 					break;
 				case 5:
-					mas.outArray();
+					for(int i=0;i<mas.arrelementscount();i++){
+						System.out.println(mas.getarr(i));
+					}
 					break;
 				case 6:
-					mas.reverseArray();
+					//mas.reverseArray();
+					for(int i=mas.arrelementscount()-1;i>=0;i--){
+						System.out.println(mas.getarr(i));
+					}
 					break;
 
 			}
