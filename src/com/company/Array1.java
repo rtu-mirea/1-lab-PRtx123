@@ -21,17 +21,13 @@ public class Array1 {
         //in.close();
     }
 
-    short getarr(int index)
+    short getarrelement(int index)
     {
         return arr[index];
     }
 
     int arrelementscount(){
-        int count=0;
-        for(int i=0;i<arr.length;i++){
-            count+=1;
-        }
-        return count;
+        return arr.length;
     }
 
     void randInput() {

@@ -16,6 +16,7 @@ public class Main {
 		Array1 mas = new Array1(n);
 
 
+
 		while (!"7".equals(s)){
 			System.out.println("Меню :");
 			System.out.println("1. Для заполнения массива вручную введите 1");
@@ -55,24 +56,24 @@ public class Main {
 
 					System.out.println("Исходный массив:");
 					for(int i=0;i<mas.arrelementscount();i++){
-						System.out.println(mas.getarr(i));
+						System.out.println(mas.getarrelement(i));
 					}
 					mas.insertionSort2();
 					System.out.println("Отсортированный массив:");
 					for(int i=0;i<mas.arrelementscount();i++){
-						System.out.println(mas.getarr(i));
+						System.out.println(mas.getarrelement(i));
 					}
 
 					break;
 				case 5:
 					for(int i=0;i<mas.arrelementscount();i++){
-						System.out.println(mas.getarr(i));
+						System.out.println(mas.getarrelement(i));
 					}
 					break;
 				case 6:
 					//mas.reverseArray();
 					for(int i=mas.arrelementscount()-1;i>=0;i--){
-						System.out.println(mas.getarr(i));
+						System.out.println(mas.getarrelement(i));
 					}
 					break;
 
