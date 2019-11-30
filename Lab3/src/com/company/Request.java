@@ -8,9 +8,9 @@ public class Request {
 
     Request(String country, int month, int from, int to){
         this.country = country;
-        this.month = month;
-        this.starDay = from;
-        this.endDay = to;
+        this.month = 0;
+        this.starDay = 0;
+        this.endDay = 0;
     }
 
     public String getCountry() {
