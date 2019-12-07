@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class SummitSystem {
-
-    static LinkedList<Leader> users = new LinkedList<Leader>();
-    static Leader currentUser;
+    
 
     public static void main(String[] args) {
+        LinkedList<Leader> users = new LinkedList<Leader>();
+        Leader currentUser = null;
         Leader tempUser;
         int numMenu;
         Scanner in = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class SummitSystem {
                     name = in.nextLine();
                     login = in.nextLine();
                     password = in.nextLine();
-                    addUser(name, login, password);
+                    addUser(name, login, password,users);
                     System.out.println("Пользователь успешно зарегистрирован");
                     break;
                 case 2: // login
@@ -34,7 +34,7 @@ public class SummitSystem {
                     login = in.nextLine();
                     password = in.nextLine();
                     try {
-                        tempUser = findUser(login, password);
+                        tempUser = findUser(login, password,users);
                     }
                     catch (RuntimeException e) {
                         System.out.println("Неверные имя или пароль");
@@ -46,14 +46,14 @@ public class SummitSystem {
 
                     break;
                 case 3: // get requests
-                    System.out.println(processRequests().toString());
+                    System.out.println(processRequests(currentUser,users).toString());
                     break;
             }
 
         }
     }
 
-    public static void addUser(String name, String login, String password){
+    public static void addUser(String name, String login, String password,LinkedList<Leader> users){
         Leader tempUser;
         tempUser = new Leader(name, login, password);
         Scanner in = new Scanner(System.in);
@@ -75,7 +75,7 @@ public class SummitSystem {
     }
 
     // used to login
-    public static Leader findUser(String login, String password){
+    public static Leader findUser(String login, String password,LinkedList<Leader> users){
         Leader tempUser;
         Iterator<Leader> iter = users.iterator();
         while (iter.hasNext()){
@@ -104,7 +104,7 @@ public class SummitSystem {
         return goodRequests;
     }
 
-    public static LinkedList<Request> processRequests(){
+    public static LinkedList<Request> processRequests(Leader currentUser,LinkedList<Leader> users){
         Leader tempUser;
         var tempRequests = new LinkedList<Request>();
         var currentRequests = new LinkedList<Request>();

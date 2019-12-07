@@ -1,6 +1,7 @@
 package com.company;
 
 public class Request {
+
     private String country;
     private int month;
     private int starDay;
