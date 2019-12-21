@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94d01f51-081b-488c-b1f2-a5757711fc63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="19c1aa42-c03b-43a6-bbcb-024621571f2c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +15,9 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1UFaqIXC5izaGs9Qi7nsi5TyW7s" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1VGQgnsJxsQMei3MGl4FVdx73A5" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1-lab-PRtx123/Lab3" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -39,10 +31,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Task3">
+  <component name="RunManager" selected="Application.MainForm">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Lab4" />
+      <module name="Lab5" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -50,9 +42,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Task3" />
-      <module name="Lab4" />
+    <configuration name="MainForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.MainForm" />
+      <module name="Lab5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.*" />
@@ -63,10 +55,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainForm" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Task3" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainForm" />
       </list>
     </recent_temporary>
   </component>
@@ -75,25 +70,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="94d01f51-081b-488c-b1f2-a5757711fc63" name="Default Changelist" comment="" />
-      <created>1574954986976</created>
+      <changelist id="19c1aa42-c03b-43a6-bbcb-024621571f2c" name="Default Changelist" comment="" />
+      <created>1576877065560</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574954986976</updated>
+      <updated>1576877065560</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
